@@ -18,3 +18,7 @@
 - Base en carpeta base (script consolidar.py). Scopus 696 + OpenAlex 893 = 1.589 registros; 1.063 únicos y 526 duplicados (513 por DOI, 13 por título). OpenAlex aporta 367 únicos frente a Scopus.
 - OpenAlex exportado completo con clave de API (893; 826 con resumen), archivo openalex-2026-11-07.json.
 - Archivo RIS con los 367 nuevos de OpenAlex: openalex-nuevos-vs-scopus-367.bib
+
+## Scopus, versión amplia con exclusiones, 07-11-2026 (conteo, sin exportar)
+- Cadena: (TITLE(volunteer* OR volunteering OR volunteerism) AND TITLE-ABS-KEY(todos los factores y resultados en un solo bloque OR) AND PUBYEAR > 2015 AND PUBYEAR < 2027, inglés o español, artículo, congreso o revisión) AND NOT (TITLE("healthy volunteer*" OR "healthy adult*" OR pharmacokinetic* OR "clinical trial" OR randomi*)).
+- Resultado: 2.802 documentos. Sin las exclusiones: 3.366 (incluyendo 2015). Nota de sintaxis: AND NOT debe ir al final y entre paréntesis; con la exclusión en medio de la cadena Scopus devolvió 36.141 (todo lo que tiene volunteer en el título).
