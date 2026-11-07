@@ -12,6 +12,7 @@ Las decisiones nuevas se agregan al final, con número correlativo.
 | D6 | Las decisiones se registran en el acta y se archivan en Drive, con copia en Markdown en el repositorio | Cristina Chancay | 07-11-2026 | Acordada |
 | D7 | Calendarizar la semana siguiente con 3 reuniones oficiales y 3 fechas de respaldo | Joel López | 07-11-2026 | Pendiente de fechas |
 | D8 | Se incorpora NotebookLM de Google como herramienta compartida para el análisis de datos, documentos y fuentes, a solicitud del Dr. Jaime Meza | Jaime Meza | 07-11-2026 | Acordada |
+| D9 | Cada miembro trabaja con su propio agente de IA, con archivo propio en `asistentes/` y rama propia. Solo el equipo coordinador incorpora cambios a `main`, a solicitud del titular. `master.md` es la guía de los documentos formales aceptados | Joel López | 07-11-2026 | Acordada |
 
 ## Asuntos por confirmar
 
