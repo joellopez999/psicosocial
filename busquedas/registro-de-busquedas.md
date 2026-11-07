@@ -22,3 +22,8 @@
 ## Scopus, versión amplia con exclusiones, 07-11-2026 (conteo, sin exportar)
 - Cadena: (TITLE(volunteer* OR volunteering OR volunteerism) AND TITLE-ABS-KEY(todos los factores y resultados en un solo bloque OR) AND PUBYEAR > 2015 AND PUBYEAR < 2027, inglés o español, artículo, congreso o revisión) AND NOT (TITLE("healthy volunteer*" OR "healthy adult*" OR pharmacokinetic* OR "clinical trial" OR randomi*)).
 - Resultado: 2.802 documentos. Sin las exclusiones: 3.366 (incluyendo 2015). Nota de sintaxis: AND NOT debe ir al final y entre paréntesis; con la exclusión en medio de la cadena Scopus devolvió 36.141 (todo lo que tiene volunteer en el título).
+
+## Scopus amplia exportada y consolidación, 07-11-2026
+- Archivo: scopus-amplia-2026-11-07.bib (2.802 registros).
+- Base consolidada (Scopus reducida 696, OpenAlex 893, Scopus amplia 2.802): 4.391 registros, 3.191 únicos, 1.200 duplicados. La amplia aporta 2.128 únicos; 661 de sus registros ya estaban en la reducida (35 de la reducida no están en la amplia por las exclusiones).
+- Aceptados del proyecto anterior recuperados con la base completa: 33 de 77 (antes 17).

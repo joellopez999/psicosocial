@@ -1,9 +1,10 @@
-Total registros: 1589
-Unicos: 1063
-Duplicados: 526
+Total registros: 4391
+Unicos: 3191
+Duplicados: 1200
 
-Scopus: 696 registros, 696 unicos aportados
+Scopus reducida: 696 registros, 696 unicos aportados
 OpenAlex: 893 registros, 367 unicos aportados
+Scopus amplia: 2802 registros, 2128 unicos aportados
 
-Sin DOI: 88
-Sin resumen: 69
+Sin DOI: 186
+Sin resumen: 89
