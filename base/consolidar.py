@@ -58,7 +58,7 @@ def parse_openalex(path):
         pos = sorted((p, word) for word, ps in inv.items() for p in ps)
         yield dict(titulo=clean(w.get('title')), autores=' and '.join(a['author']['display_name'] for a in w.get('authorships', [])),
                    anio=str(w.get('publication_year') or ''), revista=clean(((w.get('primary_location') or {}).get('source') or {}).get('display_name')),
-                   doi=norm_doi(w.get('doi')), resumen=' '.join(x for _, x in pos), palabras='')
+                   doi=norm_doi(w.get('doi')), resumen=w.get('_abstract') or ' '.join(x for _, x in pos), palabras='')
 
 P = {'.bib': parse_bib, '.ris': parse_ris, '.csv': parse_csv, '.json': parse_openalex}
 rows = []
