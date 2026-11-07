@@ -28,6 +28,10 @@ Pendiente de confirmar: quién tiene la evaluación de calidad.
 - Cribado en curso en Parsifal, con duplicados por cerrar.
 - Evaluación de calidad y extracción de datos sin abrir.
 
+## Herramientas
+
+Parsifal (proceso), Google Drive (archivos y seguimiento), GitHub en Markdown (versiones del texto), Claude (apoyo de IA) y NotebookLM de Google (cuaderno compartido para analizar datos, documentos y fuentes, a solicitud del Dr. Jaime Meza). Claude no tiene acceso a NotebookLM: lo que se concluya allí debe pasarse a este repositorio o a Drive para que Claude lo lea.
+
 ## Reglas para trabajar con Claude
 
 - Responder en español, en prosa clara y sin guiones largos como incisos.

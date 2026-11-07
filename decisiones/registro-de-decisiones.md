@@ -11,6 +11,7 @@ Las decisiones nuevas se agregan al final, con número correlativo.
 | D5 | Las demás responsabilidades del equipo se mantienen como están por ahora | Joel López | 07-11-2026 | Acordada |
 | D6 | Las decisiones se registran en el acta y se archivan en Drive, con copia en Markdown en el repositorio | Cristina Chancay | 07-11-2026 | Acordada |
 | D7 | Calendarizar la semana siguiente con 3 reuniones oficiales y 3 fechas de respaldo | Joel López | 07-11-2026 | Pendiente de fechas |
+| D8 | Se incorpora NotebookLM de Google como herramienta compartida para el análisis de datos, documentos y fuentes, a solicitud del Dr. Jaime Meza | Jaime Meza | 07-11-2026 | Acordada |
 
 ## Asuntos por confirmar
 

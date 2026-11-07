@@ -10,6 +10,7 @@ Repositorio de trabajo del equipo de la revisión sistemática sobre factores ps
 | Google Drive | Archivos y seguimiento: PDFs de texto completo, exportaciones, matrices, actas y cronograma |
 | GitHub (este repositorio) | Versiones del texto en Markdown: protocolo, decisiones y manuscrito |
 | Claude | Apoyo de IA. No decide inclusiones ni exclusiones |
+| NotebookLM (Google) | Cuaderno compartido para analizar datos, documentos y fuentes. No sustituye a Parsifal |
 
 Proyecto en Parsifal: https://parsif.al/jaime.meza/tendencias-de-los-procesos-evolutivos-psicosociales/
 
