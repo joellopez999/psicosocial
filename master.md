@@ -25,7 +25,7 @@ Estados posibles: **Vigente** (aceptado por el equipo), **Borrador** (en trabajo
 | Registro de decisiones | `decisiones/registro-de-decisiones.md` | `registro-de-decisiones.md` | Vigente | Joel López |
 | Acta de reunión del 07-11-2026 | `decisiones/acta-2026-11-07.md` | Acta en Word | Borrador, pendiente de fechas y firmas | Cristina Chancay |
 | Reglas del cribado | `cribado/README.md` | No aplica | Borrador | Joel López |
-| Calidad y extracción | `calidad-y-extraccion/README.md` | No aplica | Sin iniciar | Por confirmar |
+| Calidad y extracción | `calidad-y-extraccion/README.md` | No aplica | Sin iniciar | Jaime Meza |
 | Manuscrito | `manuscrito/` | Estado del arte en Drive | Borrador | Ana Vélez |
 
 Cuando un documento cambia de estado, se actualiza esta tabla en el mismo cambio.
@@ -38,13 +38,12 @@ Cuando un documento cambia de estado, se actualiza esta tabla en el mismo cambio
 | --- | --- |
 | Joel López | Coordinación general, repositorio, uso de Claude y cribado de estudios |
 | Ana Vélez | Responsable del manuscrito |
-| Margarita Carbó | Apoyo en el manuscrito (pendiente de confirmar) |
+| Margarita Carbó | Apoyo en el manuscrito (aceptado) |
 | Cristina Chancay | Importación, duplicados, Drive, matriz de extracción y reuniones |
-| Jaime Meza | Autor principal en Parsifal, metodología, cadenas de búsqueda y NotebookLM |
+| Jaime Meza | Autor principal en Parsifal, metodología, cadenas de búsqueda, evaluación de calidad y NotebookLM |
 | Diego Intriago, Vivian Bumbila, Ander Suárez | Miembros formales, funciones sin cambios por ahora |
 | Wilson Rivas, Joseph López, Andrés Tumbaco | Estudiantes, apoyo supervisado |
 
-Pendiente de confirmar: quién tiene la evaluación de calidad.
 
 ## 5. Herramientas y qué vive en cada una
 
@@ -76,8 +75,6 @@ El detalle está en `instrucciones-para-asistentes-ia.md`.
 
 ## 8. Pendientes
 
-- Modalidad de las reuniones de la próxima semana (presencial o virtual). Fechas ya fijadas: oficiales martes 10, miércoles 11 y jueves 12 de noviembre a las 16:00, y respaldos las mañanas siguientes a las 07:30.
-- Responsable de la evaluación de calidad.
-- Confirmación de Margarita Carbó para apoyar el manuscrito.
-- Cuaderno compartido en NotebookLM y fuentes que se cargan.
-- Pasar el repositorio a privado.
+- Reuniones de la próxima semana en modalidad mixta. Fechas ya fijadas: oficiales martes 10, miércoles 11 y jueves 12 de noviembre a las 16:00, y respaldos las mañanas siguientes a las 07:30.
+- Fuentes que se cargan en el cuaderno de NotebookLM, ya creado por Jaime Meza.
+- Pasar el repositorio a privado cuando todos los miembros tengan cuenta de GitHub. El repositorio es público por ahora, por lo que no se suben datos sensibles ni PDFs con derechos.

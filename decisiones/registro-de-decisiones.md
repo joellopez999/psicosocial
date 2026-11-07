@@ -13,8 +13,9 @@ Las decisiones nuevas se agregan al final, con número correlativo.
 | D7 | Calendarizar la semana siguiente con 3 reuniones oficiales y 3 fechas de respaldo | Joel López | 07-11-2026 | Acordada |
 | D8 | Se incorpora NotebookLM de Google como herramienta compartida para el análisis de datos, documentos y fuentes, a solicitud del Dr. Jaime Meza | Jaime Meza | 07-11-2026 | Acordada |
 | D9 | Cada miembro trabaja con su propio agente de IA, con archivo propio en `asistentes/` y rama propia. Solo el equipo coordinador incorpora cambios a `main`, a solicitud del titular. `master.md` es la guía de los documentos formales aceptados | Joel López | 07-11-2026 | Acordada |
+| D10 | La evaluación de calidad queda a cargo del Dr. Jaime Meza. Margarita Carbó acepta apoyar el manuscrito junto a Ana Vélez | Jaime Meza | 07-11-2026 | Acordada |
+| D11 | Las reuniones de la próxima semana serán en modalidad mixta, presencial y virtual | Joel López | 07-11-2026 | Acordada |
 
 ## Asuntos por confirmar
 
-- Responsable de la evaluación de calidad.
-- Aceptación de Margarita Carbó para apoyar el manuscrito.
+- Pasar el repositorio a privado cuando todos los miembros tengan cuenta de GitHub (recordatorio permanente).
