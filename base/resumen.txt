@@ -1,0 +1,8 @@
+Total registros: 696
+Unicos: 696
+Duplicados: 0
+
+Scopus: 696 registros, 696 unicos aportados
+
+Sin DOI: 18
+Sin resumen: 2
