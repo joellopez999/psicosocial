@@ -17,4 +17,4 @@
 ## Consolidación 07-11-2026
 - Base en carpeta base (script consolidar.py). Scopus 696 + OpenAlex 893 = 1.589 registros; 1.063 únicos y 526 duplicados (513 por DOI, 13 por título). OpenAlex aporta 367 únicos frente a Scopus.
 - OpenAlex exportado completo con clave de API (893; 826 con resumen), archivo openalex-2026-11-07.json.
-- Archivo RIS con los 367 nuevos de OpenAlex: openalex-nuevos-vs-scopus-367.ris
+- Archivo RIS con los 367 nuevos de OpenAlex: openalex-nuevos-vs-scopus-367.bib
