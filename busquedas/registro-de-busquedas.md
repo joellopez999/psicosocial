@@ -13,3 +13,8 @@
 - ScienceDirect: 859 resultados. Título: volunteer OR volunteering OR volunteerism; palabras clave: "well-being" OR "mental health" OR retention OR burnout OR resilience OR "social support" OR psychosocial OR motivation; 2016 a 2026; artículos de investigación y revisiones.
 - OpenAlex (vía API pública, fuente complementaria): 893 resultados con volunteer/volunteering/volunteerism en título, un factor psicosocial y un resultado en título o resumen, 2016 a 2026, artículo o revisión, inglés o español. La API gratuita tiene presupuesto diario compartido por IP; para exportar el total conviene una clave gratuita.
 - Web of Science: sin acceso (requiere suscripción institucional). Pendiente gestionar acceso o dejar como limitación.
+
+## Consolidación 07-11-2026
+- Base en carpeta base (script consolidar.py). Scopus 696 + OpenAlex 893 = 1.589 registros; 1.063 únicos y 526 duplicados (513 por DOI, 13 por título). OpenAlex aporta 367 únicos frente a Scopus.
+- OpenAlex exportado completo con clave de API (893; 826 con resumen), archivo openalex-2026-11-07.json.
+- Archivo RIS con los 367 nuevos de OpenAlex: openalex-nuevos-vs-scopus-367.ris

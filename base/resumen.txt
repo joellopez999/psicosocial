@@ -1,8 +1,9 @@
-Total registros: 696
-Unicos: 696
-Duplicados: 0
+Total registros: 1589
+Unicos: 1063
+Duplicados: 526
 
 Scopus: 696 registros, 696 unicos aportados
+OpenAlex: 893 registros, 367 unicos aportados
 
-Sin DOI: 18
-Sin resumen: 2
+Sin DOI: 88
+Sin resumen: 69
