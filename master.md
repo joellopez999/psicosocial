@@ -76,7 +76,7 @@ El detalle está en `instrucciones-para-asistentes-ia.md`.
 
 ## 8. Pendientes
 
-- Fechas de las reuniones de la próxima semana (3 oficiales y 3 de respaldo).
+- Modalidad de las reuniones de la próxima semana (presencial o virtual). Fechas ya fijadas: oficiales martes 10, miércoles 11 y jueves 12 de noviembre a las 16:00, y respaldos las mañanas siguientes a las 07:30.
 - Responsable de la evaluación de calidad.
 - Confirmación de Margarita Carbó para apoyar el manuscrito.
 - Cuaderno compartido en NotebookLM y fuentes que se cargan.
