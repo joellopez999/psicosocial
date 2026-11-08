@@ -27,3 +27,6 @@
 - Archivo: scopus-amplia-2026-11-07.bib (2.802 registros).
 - Base consolidada (Scopus reducida 696, OpenAlex 893, Scopus amplia 2.802): 4.391 registros, 3.191 únicos, 1.200 duplicados. La amplia aporta 2.128 únicos; 661 de sus registros ya estaban en la reducida (35 de la reducida no están en la amplia por las exclusiones).
 - Aceptados del proyecto anterior recuperados con la base completa: 33 de 77 (antes 17).
+
+## ScienceDirect, exportación RIS (2026-11-08)
+859 registros exportados en 9 archivos RIS (bloques de 100) en `busquedas/sciencedirect/`. Aportaron 571 registros únicos a la base, que pasa a 3,762. Prelectura aplicada solo a los nuevos: 261 para cribar (59 A, 202 B, de ellos 100 restaurados de X por lectura manual) y 310 excluidos propuestos. Lote extra: `cribado/rayyan/rayyan-lote-5.csv` y `cribado/sheets/Cribado-*-lote-extra.xlsx`.

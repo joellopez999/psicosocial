@@ -30,7 +30,7 @@ def parse_bib(path):
 
 def parse_ris(path):
     rec = {}; au = []
-    for line in open(path, encoding='utf8-sig'):
+    for line in open(path, encoding='utf-8-sig'):
         m = re.match(r'^([A-Z][A-Z0-9])  - ?(.*)$', line.rstrip('\n'))
         if not m: continue
         k, v = m.groups()

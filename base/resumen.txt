@@ -1,10 +1,11 @@
-Total registros: 4391
-Unicos: 3191
-Duplicados: 1200
+Total registros: 5250
+Unicos: 3762
+Duplicados: 1488
 
 Scopus reducida: 696 registros, 696 unicos aportados
 OpenAlex: 893 registros, 367 unicos aportados
 Scopus amplia: 2802 registros, 2128 unicos aportados
+ScienceDirect: 859 registros, 571 unicos aportados
 
 Sin DOI: 186
-Sin resumen: 89
+Sin resumen: 116
