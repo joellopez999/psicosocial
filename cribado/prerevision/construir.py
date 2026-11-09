@@ -15,7 +15,9 @@ def prio(i):
     if d[i]=='D': return 3
     return 1 if P[i]['categoria'].startswith('A') else 2
 pas.sort(key=lambda i:(prio(i),i))
-lotes=[pas[0::2],pas[1::2]]
+p1=[i for i in pas if prio(i)==1]; resto=[i for i in pas if prio(i)!=1]
+lotes=[p1[0::2],p1[1::2]]
+simples=[resto[k::4] for k in range(4)]
 H=Font(name='Arial',bold=True,color='FFFFFF'); HF=PatternFill('solid',fgColor='1F3864'); F=Font(name='Arial',size=10)
 EJ=PatternFill('solid',fgColor='FFF2CC')
 NOTA={1:'Prioridad alta: cumple a primera vista',2:'Prioridad media: cumple, factor o resultado menos explícito',3:'Duda: revisar con cuidado, decidir con texto completo si hace falta'}
@@ -32,12 +34,12 @@ def criterios(wb):
     for r in ws.iter_rows():
         for c in r: c.font=F
     ws.column_dimensions['A'].width=110
-def libro(nom,par,ids,lote):
-    wb=openpyxl.Workbook(); wb.remove(wb.active)
+def hoja_cribado(wb,titulo,ids,col_ia):
     cols=['id','prioridad','año','título (original)','título (español)','resumen (original)','¿traducir resumen? (elige Sí)','resumen (español, a pedido)','revista','doi','nota de la prerevisión','DECISIÓN','MOTIVO (si excluye)','nota']
-    ws=hoja(wb,'Cribado',cols,[9,9,6,50,50,70,12,70,26,22,34,12,14,28])
+    ws=hoja(wb,titulo,cols,[9,9,6,50,50,70,12,70,26,22,34,12,14,28])
     for n,i in enumerate(ids,2):
         r=P[i]; pr=prio(i); nt=NOTA[pr]+('. Rescatado de la exclusión automática' if r['categoria']=='X_excluir' else '')
+        if col_ia: nt+='. La IA propone que pase (segundo revisor)'
         ws.append([i,pr,int(r['anio']) if r['anio'].isdigit() else r['anio'],r['titulo'],TES[i],
                    r['resumen'][:4900],None,f'=IF(G{n}="Sí",IFERROR(GOOGLETRANSLATE(F{n},"en","es"),"no cargó: borra el Sí y vuelve a elegirlo"),"")',r['revista'],r['doi'],nt,None,None,None])
     for row in ws.iter_rows(min_row=2):
@@ -49,21 +51,27 @@ def libro(nom,par,ids,lote):
     ws.auto_filter.ref=f'A1:N{last}'
     for c in ('L','M','N'): ws[f'{c}1'].fill=PatternFill('solid',fgColor='C00000')
     ws['G1'].fill=PatternFill('solid',fgColor='548235')
+def libro(nom,par,ids,lote,sim):
+    wb=openpyxl.Workbook(); wb.remove(wb.active)
+    hoja_cribado(wb,'1 Doble (prioridad 1)',ids,False)
+    hoja_cribado(wb,'2 Simple (prioridad 2 y dudas)',sim,True)
     ins=wb.create_sheet('Instrucciones',0); ins.column_dimensions['A'].width=120
-    for t in [f'Revisor: {nom}. Pareja: {nom} y {par} (lote {lote}, {len(ids)} registros, prerevisados). Cribado por título y resumen.',
+    for t in [f'Revisor: {nom}. Cribado por título y resumen. Tienes dos pestañas de trabajo.',
+      f'Pestaña 1 Doble (prioridad 1): {len(ids)} registros. Los revisas tú y también {par} (lote {lote}), sin verse (cribado ciego). Empieza por aquí.',
+      f'Pestaña 2 Simple (prioridad 2 y dudas): {len(sim)} registros que solo revisas tú. La prerevisión de la IA cuenta como segundo revisor: si tú excluyes o dudas, un tercero decide. Hazla después de la pestaña 1.',
       'Solo llenas las columnas rojas: L DECISIÓN (Incluir, Excluir o Dudar), M MOTIVO si excluyes (E1 a E6, ver hoja Criterios) y N nota libre.',
       'Ejemplo de llenado: L = Excluir, M = E4, N = "estudio de voluntarios sanos en un ensayo de fármacos".',
       'La columna E trae el título ya traducido al español. Para leer el resumen en español, elige Sí en la columna verde G de esa fila y la columna H lo traduce con Google en unos segundos. Hazlo fila por fila, solo cuando lo necesites: si se piden cientos a la vez, Google deja de responder. La traducción es de apoyo: ante duda, manda el original.',
-      'Orden: primero prioridad 1 (alta), luego 2 (media) y al final 3 (duda). La prioridad y la nota vienen de una prerevisión asistida por IA y NO son una decisión: decide tú.',
-      'Trabaja SOLO en tu archivo. No abras el de tu pareja hasta terminar (cribado ciego). Los desacuerdos los resuelve un tercero.',
+      'La prioridad y la nota vienen de una prerevisión asistida por IA y NO son una decisión: decide tú.',
+      'Trabaja SOLO en tu archivo. No abras el de tu pareja hasta terminar. Los desacuerdos los resuelve un tercero.',
       'No cambies el orden de las filas ni el id. Dudar pasa a texto completo; excluye solo cuando el título y el resumen lo muestran claramente.']:
         ins.append([t])
     for r in ins.iter_rows():
         for c in r: c.font=F; c.alignment=Alignment(wrap_text=True)
-    ins['A3'].fill=EJ
+    ins['A5'].fill=EJ
     criterios(wb); wb.save(f'salida/Cribado-{nom}-prerevisado.xlsx')
 import os; os.makedirs('salida',exist_ok=True)
-for nom,par,m in [('Joel','Margarita',0),('Margarita','Joel',0),('Cristina','Anita',1),('Anita','Cristina',1)]: libro(nom,par,lotes[m],m+1)
+for k,(nom,par,m) in enumerate([('Joel','Margarita',0),('Margarita','Joel',0),('Cristina','Anita',1),('Anita','Cristina',1)]): libro(nom,par,lotes[m],m+1,simples[k])
 # exclusiones
 random.seed(2026); exc.sort(); mues=set(random.sample(exc,round(len(exc)*0.1)))
 wb=openpyxl.Workbook(); wb.remove(wb.active)
@@ -93,4 +101,4 @@ w=csv.writer(open('salida/rayyan-prerevisado.csv','w',newline='',encoding='utf-8
 w.writerow(['key','title','authors','journal','year','abstract','doi','keywords','notes'])
 for i in pas: r=P[i]; w.writerow([i,r['titulo'],r['autores'],r['revista'],r['anio'],r['resumen'],r['doi'],r['palabras'],f'prerevision {d[i]} prioridad {prio(i)}'])
 import collections
-print(len(pas),[len(l) for l in lotes],collections.Counter(prio(i) for i in pas),len(exc),len(mues))
+print(len(pas),[len(l) for l in lotes],[len(x) for x in simples],collections.Counter(prio(i) for i in pas),len(exc),len(mues))
